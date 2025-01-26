@@ -1,3 +1,7 @@
+---
+hide:
+  - toc
+---
 # TMDb Builders
 
 You can find items using the features of [TheMovieDb.org](https://www.themoviedb.org/) (TMDb).
@@ -18,19 +22,6 @@ You can find items using the features of [TheMovieDb.org](https://www.themoviedb
 | [`tmdb_network`](#tmdb-network)       | Finds every item from the TMDb network's show list       |  :fontawesome-solid-circle-xmark:{ .red }  | :fontawesome-solid-circle-check:{ .green } |  :fontawesome-solid-circle-xmark:{ .red }  |
 | [`tmdb_keyword`](#tmdb-keyword)       | Finds every item from the TMDb keyword's movie/show list | :fontawesome-solid-circle-check:{ .green } | :fontawesome-solid-circle-check:{ .green } |  :fontawesome-solid-circle-xmark:{ .red }  |
 
-## Standard TMDb Details Builders
-
-| Attribute                                     | Description                                                                                                                          |             Works with Movies              |              Works with Shows              |   Works with Playlists and Custom Sort   |
-|:----------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------:|:------------------------------------------:|:----------------------------------------:|
-| [`tmdb_collection_details`](#tmdb-collection) | Finds every item in the TMDb collection and updates the collection with the summary, poster, and background from the TMDb collection | :fontawesome-solid-circle-check:{ .green } |  :fontawesome-solid-circle-xmark:{ .red }  | :fontawesome-solid-circle-xmark:{ .red } |
-| [`tmdb_list_details`](#tmdb-list)             | Finds every item in the TMDb List and updates the collection with the description and poster of the TMDb list                        | :fontawesome-solid-circle-check:{ .green } | :fontawesome-solid-circle-check:{ .green } | :fontawesome-solid-circle-xmark:{ .red } |
-| [`tmdb_actor_details`](#tmdb-actor)           | Finds every item in the TMDb Person's Actor Credits with the biography and profile from the TMDb person                              | :fontawesome-solid-circle-check:{ .green } | :fontawesome-solid-circle-check:{ .green } | :fontawesome-solid-circle-xmark:{ .red } |
-| [`tmdb_crew_details`](#tmdb-crew)             | Finds every item in the TMDb Person's Crew Credits with the biography and profile from the TMDb person                               | :fontawesome-solid-circle-check:{ .green } | :fontawesome-solid-circle-check:{ .green } | :fontawesome-solid-circle-xmark:{ .red } |
-| [`tmdb_director_details`](#tmdb-director)     | Finds every item in the TMDb Person's Actor Credits with the biography and profile from the TMDb person                              | :fontawesome-solid-circle-check:{ .green } | :fontawesome-solid-circle-check:{ .green } | :fontawesome-solid-circle-xmark:{ .red } |
-| [`tmdb_producer_details`](#tmdb-producer)     | Finds every item in the TMDb Person's Producer Credits with the biography and profile from the TMDb person                           | :fontawesome-solid-circle-check:{ .green } | :fontawesome-solid-circle-check:{ .green } | :fontawesome-solid-circle-xmark:{ .red } |
-| [`tmdb_writer_details`](#tmdb-writer)         | Finds every item in the TMDb Person's Writer Credits with the biography and profile from the TMDb person                             | :fontawesome-solid-circle-check:{ .green } | :fontawesome-solid-circle-check:{ .green } | :fontawesome-solid-circle-xmark:{ .red } |
-| [`tmdb_movie_details`](#tmdb-movie)           | Finds the movie specified and updates the collection with the summary, poster, and background from the TMDb movie                    | :fontawesome-solid-circle-check:{ .green } |  :fontawesome-solid-circle-xmark:{ .red }  | :fontawesome-solid-circle-xmark:{ .red } |
-| [`tmdb_show_details`](#tmdb-show)             | Finds the show specified and updates the collection with the summary, poster, and background from the TMDb show                      |  :fontawesome-solid-circle-xmark:{ .red }  | :fontawesome-solid-circle-check:{ .green } | :fontawesome-solid-circle-xmark:{ .red } |
 
 ## Other TMDb Builders
 
@@ -77,6 +68,10 @@ The builders below are expected to have a single integer value of how many movie
 
 Finds every item in the TMDb collection.
 
+    ???+ tip "Details Builder"
+
+        You can replace `tmdb_collection` with `tmdb_collection_details` if you would like to fetch and use the TMDb collection's summary, poster, and background from the list
+
 ```yaml
 collections:
   The Lord of the Rings:
@@ -89,8 +84,6 @@ collections:
       - https://www.themoviedb.org/collection/121938
 ```
 
-* You can update the collection details with the TMDb collection's summary, poster, and background by using 
-`tmdb_collection_details`.
 * You can specify multiple collections in `tmdb_collection_details` but it will only use the first one to update the 
 collection details.
 * Posters and background in the library's asset directory will be used over the collection details unless 
@@ -115,6 +108,10 @@ Finds every item in the TMDb List.
 The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated 
 and in a specific order. 
 
+    ???+ tip "Details Builder"
+
+        You can replace `tmdb_list` with `tmdb_list_details` if you would like to fetch and use the description and poster from the list
+
 ```yaml
 collections:
   Top 50 Grossing Films of All Time (Worldwide):
@@ -123,7 +120,6 @@ collections:
     sync_mode: sync
 ```
 
-* You can update the collection details with the TMDb list's description and poster by using `tmdb_list_details`.
 * You can specify multiple lists in `tmdb_list_details` but it will only use the first one to update the collection 
 details.
 
@@ -137,13 +133,16 @@ collections:
 
 Finds every item in the TMDb Person's Actor Credits.
 
+    ???+ tip "Details Builder"
+
+        You can replace `tmdb_actor` with `tmdb_actor_details` if you would like to fetch and use the TMDb Person's biography and profile from the list
+
 ```yaml
 collections:
   Robin Williams:
     tmdb_actor: 2157  #https://www.themoviedb.org/person/2157-robin-williams also accepted
 ```
 
-* You can update the collection details with the TMDb Person's biography and profile by using `tmdb_actor_details`.
 * You can specify multiple people in `tmdb_actor_details` but it will only use the first one to update the collection 
 details.
 
@@ -157,13 +156,16 @@ collections:
 
 Finds every item in the TMDb Person's Crew Credits.
 
+    ???+ tip "Details Builder"
+
+        You can replace `tmdb_crew` with `tmdb_crew_details` if you would like to fetch and use the TMDb Person's biography and profile from the list
+
 ```yaml
 collections:
   Quentin Tarantino:
     tmdb_crew: 138  #https://www.themoviedb.org/person/138-quentin-tarantino also accepted
 ```
 
-* You can update the collection details with the TMDb Person's biography and profile by using `tmdb_crew_details`.
 * You can specify multiple people in `tmdb_crew_details` but it will only use the first one to update the collection 
 details.
 
@@ -177,13 +179,16 @@ collections:
 
 Finds every item in the TMDb Person's Director Credits.
 
+    ???+ tip "Details Builder"
+
+        You can replace `tmdb_director` with `tmdb_director_details` if you would like to fetch and use the TMDb Person's biography and profile from the list
+
 ```yaml
 collections:
   Steven Spielberg:
     tmdb_director: 488  #https://www.themoviedb.org/person/488-steven-spielberg also accepted
 ```
 
-* You can update the collection details with the TMDb Person's biography and profile by using `tmdb_director_details`.
 * You can specify multiple people in `tmdb_director_details` but it will only use the first one to update the collection 
 details.
 
@@ -197,13 +202,16 @@ collections:
 
 Finds every item in the TMDb Person's Producer Credits.
 
+    ???+ tip "Details Builder"
+
+        You can replace `tmdb_producer` with `tmdb_producer_details` if you would like to fetch and use the TMDb Person's biography and profile from the list
+
 ```yaml
 collections:
   Adam Sandler:
     tmdb_producer: 19292  #https://www.themoviedb.org/person/19292-adam-sandler also accepted
 ```
 
-* You can update the collection details with the TMDb Person's biography and profile by using `tmdb_producer_details`.
 * You can specify multiple people in `tmdb_producer_details` but it will only use the first one to update the collection 
 details.
 
@@ -217,13 +225,16 @@ collections:
 
 Finds every item in the TMDb Person's Writer Credits.
 
+    ???+ tip "Details Builder"
+
+        You can replace `tmdb_writer` with `tmdb_writer_details` if you would like to fetch and use the TMDb Person's biography and profile from the list
+
 ```yaml
 collections:
   Woody Allen:
     tmdb_writer: 1243 #https://www.themoviedb.org/person/1243-woody-allen also accepted
 ```
 
-* You can update the collection details with the TMDb Person's biography and profile by using `tmdb_writer_details`.
 * You can specify multiple people in `tmdb_writer_details` but it will only use the first one to update the collection 
 details.
 
@@ -237,15 +248,16 @@ collections:
 
 Finds the movie specified.
 
+    ???+ tip "Details Builder"
+
+        You can replace `tmdb_movie` with `tmdb_movie_details` if you would like to fetch and use the TMDb movie's summary, poster, and background from the list
+
 ```yaml
 collections:
   Anaconda:
-    tmdb_collection: 105995 #https://www.themoviedb.org/collection/105995 also accepted
     tmdb_movie: 336560      #https://www.themoviedb.org/movie/336560 also accepted
 ```
 
-* You can update the collection details with the TMDb movie's summary, poster, and background by using 
-`tmdb_movie_details`.
 * You can specify multiple movies in `tmdb_movie_details` but it will only use the first one to update the collection 
 details.
 * Posters and background in the library's asset directory will be used over the collection details unless 
@@ -254,13 +266,16 @@ details.
 ```yaml
 collections:
   Deadpool Specials:
-    tmdb_collection: 567604
     tmdb_movie_details: 558144
 ```
 
 ## TMDb Show
 
 Finds the show specified.
+
+    ???+ tip "Details Builder"
+
+        You can replace `tmdb_show` with `tmdb_show_details` if you would like to fetch and use the TMDb show's summary, poster, and background from the list
 
 ```yaml
 collections:
@@ -270,8 +285,6 @@ collections:
       - 60554 #https://www.themoviedb.org/tv/60554-star-wars-rebels also accepted
 ```
 
-* You can update the collection details with the TMDb show's summary, poster, and background by using 
-`tmdb_show_details`.
 * You can specify multiple shows in `tmdb_show_details` but it will only use the first one to update the collection 
 details.
 * Posters and background in the library's asset directory will be used over the collection details unless 
