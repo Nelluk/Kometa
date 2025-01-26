@@ -95,7 +95,7 @@ You can use the `plex_all: true` builder to filter from your entire library.
 
 ???+ warning
     
-    Filters can be very slow, particularly on larger libraries. Try to build or narrow your items using a [Smart Label Collection](builders/smart.md#smart-label), [Plex Search](builders/plex.md#plex-search) or another [Builder](overview.md) if possible.
+    Filters can be very slow, particularly on larger libraries. Try to build or narrow your items using a [Smart Label Collection](builders/plex.md#__tabbed_2_2), [Plex Search](builders/plex.md#__tabbed_3_2) or another [Builder](overview.md) if possible.
 
 ## Filter Options
 
@@ -328,7 +328,7 @@ You can use the `plex_all: true` builder to filter from your entire library.
     | `tmdb_keyword`<sup>**2**</sup>   | Uses the keywords from TMDb to match                                                                                                            | `Movies`, `Shows`                                                           |
     | `origin_country`<sup>**2**</sup> | Uses TMDb origin country [ISO 3166-1 alpha-2 codes](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) to match<br>Example: `origin_country: us` | `Shows`                                                                     |
     | `tvdb_genre`<sup>**2**</sup>     | Uses the genres from TVDb to match                                                                                                              | `Shows`                                                                     |
-    | `imdb_keyword`<sup>**2**</sup>   | Uses the keywords from IMDb to match See [Special](#special-filters) for more attributes                                                        | `Movies`, `Shows`                                                           |
+    | `imdb_keyword`<sup>**2**</sup>   | Uses the keywords from IMDb to match See [Special Filters](#__tabbed_1_6) for more attributes                                                        | `Movies`, `Shows`                                                           |
     
     <sup>**1**</sup> Filters using the special `episodes`/`tracks` [filter](#__tabbed_1_6) with the [default percent](settings.md).
     

@@ -14,7 +14,7 @@
     --md-primary-fg-color:        #00bc8c;
     --md-primary-fg-color--light: #00bc8c;
     --md-primary-fg-color--dark:  #00bc8c;
-    --md-default-bg-color: #252525;
+    --md-default-bg-color: #121212;
     --md-footer-bg-color--dark: var(--md-default-bg-color);
     --md-primary-bg-color--light: #ffffffb3;
     --pg-light-border: rgb(47, 47, 47);
@@ -234,6 +234,21 @@ table.dualTable td, table.dualTable th {
     margin: 5px auto;
     font-size: inherit;
 }
+
+.md-typeset .admonition, .md-typeset details {
+    background-color: #282828;
+    border: .075rem solid #575757;
+    border-radius: .2rem;
+    box-shadow: var(--md-shadow-z1);
+    color: var(--md-admonition-fg-color);
+    display: flow-root;
+    font-size: .64rem;
+    margin: 1.5625em 0;
+    padding: 0 .6rem;
+    page-break-inside: avoid;
+    transition: box-shadow 125ms;
+}
+
 .md-typeset .blank > .admonition-title,
 .md-typeset .blank > summary {
     background-color: rgba(43, 155, 70, 0.1);

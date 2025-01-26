@@ -426,7 +426,7 @@ if you have a Smart Label collection, you can pass the `sort_by` value you want 
         smart_label: audience_rating.desc
     ```
 
-The Sort Orders available for "Smart" collections are outlined on the **[Smart Plex Builder](../../files/builders/smart.md)** page.
+The Sort Orders available for "Smart" collections are outlined on the **[Plex Builder](../../files/builders/plex.md)** page.
 
 ??? tip
     

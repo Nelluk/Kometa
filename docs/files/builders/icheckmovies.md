@@ -9,7 +9,6 @@ You can find items using the lists on [ICheckMovies.com](https://www.icheckmovie
 | Attribute                                      | Description                                                                                                         |             Works with Movies              |             Works with Shows             |    Works with Playlists and Custom Sort    |
 |:-----------------------------------------------|:--------------------------------------------------------------------------------------------------------------------|:------------------------------------------:|:----------------------------------------:|:------------------------------------------:|
 | [`icheckmovies_list`](#__tabbed_1_1)           | Finds every movie in the ICheckMovies List                                                                          | :fontawesome-solid-circle-check:{ .green } | :fontawesome-solid-circle-xmark:{ .red } | :fontawesome-solid-circle-check:{ .green } |
-| [`icheckmovies_list_details`](#__tabbed_1_1)   | Finds every movie in the ICheckMovies List and updates the collection with the description of the ICheckMovies list | :fontawesome-solid-circle-check:{ .green } | :fontawesome-solid-circle-xmark:{ .red } | :fontawesome-solid-circle-check:{ .green } |
 
 === "ICheckMovies List"
     

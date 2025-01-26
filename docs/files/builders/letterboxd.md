@@ -9,7 +9,6 @@ You can find items using the lists on [Letterboxd.com](https://letterboxd.com/) 
 | Attribute                                  | Description                                                                                                     |             Works with Movies              |             Works with Shows             |    Works with Playlists and Custom Sort    |
 |:-------------------------------------------|:----------------------------------------------------------------------------------------------------------------|:------------------------------------------:|:----------------------------------------:|:------------------------------------------:|
 | [`letterboxd_list`](#__tabbed_1_1)         | Finds every movie in the Letterboxd List                                                                        | :fontawesome-solid-circle-check:{ .green } | :fontawesome-solid-circle-xmark:{ .red } | :fontawesome-solid-circle-check:{ .green } |
-| [`letterboxd_list_details`](#__tabbed_1_2) | Finds every movie in the Letterboxd List and updates the collection with the description of the Letterboxd list | :fontawesome-solid-circle-check:{ .green } | :fontawesome-solid-circle-xmark:{ .red } | :fontawesome-solid-circle-check:{ .green } |
 
 === "Letterboxd List"
     

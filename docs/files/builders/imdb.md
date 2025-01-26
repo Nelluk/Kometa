@@ -422,7 +422,7 @@ You can find items using the features of [IMDb.com](https://www.imdb.com/) (IMDb
         Due to recent changes in IMDb's code, `imdb_list` can no longer be used for any url which starts with 
         `https://www.imdb.com/search/` or `https://www.imdb.com/filmosearch/`.
     
-        These must instead use the [IMDb Search Builder](#imdb-search)
+        These must instead use the [IMDb Search Builder](#__tabbed_1_3)
     
     
     Finds every item in an IMDb List.

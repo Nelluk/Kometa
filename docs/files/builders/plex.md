@@ -137,7 +137,7 @@ Smart Builders are usually the recommended approach as they are lightweight and 
         To make a collection a Smart Label Collection, the `smart_label` attribute must be added to the collection definition. 
         It functions in two different ways:
 
-        1. Define the sort using the Movies/Shows column of the [Sorts Table](#sort-options) below along with any other builder 
+        1. Define the sort using the Movies/Shows column of the [Sorts Table](#__tabbed_1_4) below along with any other builder 
         to make that collection a Smart Label Collection.
             ```yaml
             collections:
@@ -159,8 +159,8 @@ Smart Builders are usually the recommended approach as they are lightweight and 
             ```
         
         This is extremely useful because smart collections don't follow normal show/hide rules and can eliminate the need to 
-        have [Plex Collectionless](plex.md#plex-collectionless) when used correctly. To fix the issue described in 
-        [Plex Collectionless](plex.md#plex-collectionless) you would make `Marvel Cinematic Universe` a Smart Label Collection 
+        have [Plex Collectionless](#__tabbed_3_5) when used correctly. To fix the issue described in 
+        [Plex Collectionless](#__tabbed_3_5) you would make `Marvel Cinematic Universe` a Smart Label Collection 
         and all other Marvel collection just normal collections, and they will show/hide all the movie properly.
         
         To have the Smart Label Collections to eliminate Plex Collectionless you have to go all in on using them. A good rule of 
@@ -369,7 +369,7 @@ Smart Builders are usually the recommended approach as they are lightweight and 
         
     === "Plex Collectionless"
     
-        **This is not needed if you're using [Smart Label Collections](smart.md#smart-label).**
+        **This is not needed if you're using [Smart Label Collections](#__tabbed_2_2).**
         
         Finds every item that is not in a collection unless the collection is in the exclusion list. This is a special 
         collection type to help keep your library looking correct. When items in your library are in multiple collections it 
@@ -687,5 +687,5 @@ Smart Builders are usually the recommended approach as they are lightweight and 
     | Attribute  | Description & Values                                                                                                                                                                                                                               |
     |:-----------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | `limit`    | **Description:** The max number of item for the filter.<br>**Default:** `all`<br>**Values:** `all` or a number greater than 0                                                                                                                      |
-    | `sort_by`  | **Description:** This will control how the filter is sorted in your library. You can do a multi-level sort using a list.<br>**Default:** `random`<br>**Values:** Any sort options for your filter type in the [Sorts Options Table](#sort-options) |
+    | `sort_by`  | **Description:** This will control how the filter is sorted in your library. You can do a multi-level sort using a list.<br>**Default:** `random`<br>**Values:** Any sort options for your filter type in the [Sorts Options Table](#__tabbed_1_4) |
     | `validate` | **Description:** Determines if a collection will fail on a validation error<br>**Default:** `true`<br>**Values**: `true` or `false`                                                                                                                |

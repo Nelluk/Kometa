@@ -464,7 +464,7 @@ With the release of Kometa 1.20, several changes have been made. Please read the
 
     All URLs used with `imdb_list` **must** start with `https://www.imdb.com/list/`
 
-    We have introduced the [IMDb Search Builder](../files/builders/imdb.md#imdb-search) which replaces the functionality that `search/title/` and `search/keyword/` used to provide.
+    We have introduced the [IMDb Search Builder](../files/builders/imdb.md#__tabbed_1_3) which replaces the functionality that `search/title/` and `search/keyword/` used to provide.
 
     As an example, the `imdb_search` builder for `https://www.imdb.com/search/keyword/?keywords=christmas-movie` would be:
 
